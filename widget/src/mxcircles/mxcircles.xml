@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <widget id="mxcircles.widget.mxcircles" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
     <name>mxcircles</name>
-    <description>The description of this widget.</description>
+    <description>Mendix implementation of Circles.</description>
 
-    <icon />
+    <icon>
+   iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExOTc2RUY2MUY1QThEOThDMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3QUY5OTM0QzExREQxMUU2ODQ4OTlGMUFFQzk5M0VERSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3QUY5OTM0QjExREQxMUU2ODQ4OTlGMUFFQzk5M0VERSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjA1ODAxMTc0MDcyMDY4MTFBNjI2Q0RFMjYzRDAyQTY4IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE5NzZFRjYxRjVBOEQ5OEMzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+6JVbWgAAARhJREFUeNpi+P//PwMIvynMZwNiAxifWMzEAARviwp4gNRtID4PZO9iIAEwQWldIJaDsl2hBhIFWKA0M5o48xpfb2kgnQnEm0I2bz1FyAXYQDsQVwPxRmK8gA0IQWlOcg0gKRAHzgAWXBIyAgJSYry8DMyMjDzAaD2DJHUciAuE+yb8xWuArKAgLwcLCyyKjZGkQOwmIH6N1wCgZv/ff//msTIzM6JJ7Qba/hrDC2++fmV4+uEDA1ATw5dfvw4A0/lfHGZLMPh6PwUmLpBXGBhBGeJmeqrflWfPNv4nPuzeAbEY0JC/4Fj4/OPHVSYmJhL0M3wBaYZ7wWTh4rufwkMDgM4v+Pb796O///79xKP5FxBPgXEAAgwAlnaHMAPWyd0AAAAASUVORK5CYII=
+    </icon>
+
 
     <properties>
-        <property key="elementid" type="string" required="true" defaultValue="">
-            <caption>Element ID</caption>
-            <category>Setup</category>
-            <description>This ID of the HTML element to turn into a circle</description>
-        </property>
         <property key="radius" type="attribute" required="true">
             <caption>Radius</caption>
-            <category>Setup</category>
+            <category>Data</category>
             <description>The radius of the circles</description>
             <attributeTypes>
                         <attributeType name="Integer"/>
@@ -23,7 +21,7 @@
         </property>
         <property key="value" type="attribute" required="true">
             <caption>Value</caption>
-            <category>Setup</category>
+            <category>Data</category>
             <description>Init value of the circle (optional, defaults to 0)</description>
             <attributeTypes>
                         <attributeType name="Integer"/>
@@ -33,7 +31,7 @@
         </property>
         <property key="maxValue" type="attribute" required="true">
             <caption>Max Value</caption>
-            <category>Setup</category>
+            <category>Data</category>
             <description>Maximum value of the circle (optional, defaults to 100)</description>
             <attributeTypes>
                         <attributeType name="Integer"/>
@@ -43,7 +41,7 @@
         </property>
         <property key="width" type="attribute" required="true">
             <caption>Width</caption>
-            <category>Setup</category>
+            <category>Data</category>
             <description>The width of the ring (optional, has value 10, if not specified)</description>
             <attributeTypes>
                         <attributeType name="Integer"/>
@@ -53,38 +51,33 @@
         </property>
         <property key="colors" type="string" required="true" defaultValue="#D3B6C6,#4B253A">
             <caption>Colours</caption>
-            <category>Setup</category>
+            <category>Appearance</category>
             <description>An array of colors, with the first item coloring the full circle (optional, it will be ['#EEE', '#F00'] if not specified) Can also be an rgba() value (example: ['rgba(255,255,255,0.25)', 'rgba(125,125,125,0.5)'])</description>
         </property>
         <property key="duration" type="integer" required="true" defaultValue="500">
             <caption>Duration</caption>
-            <category>Setup</category>
+            <category>Appearance</category>
             <description>Value in ms of animation's duration; defaults to 500; if 0 or null is passed, the animation will not run.</description>
         </property>
         <property key="wrpClass" type="string" required="false" defaultValue="circles-wrp">
             <caption>Wrapper Class</caption>
-            <category>Setup</category>
+            <category>Appearance</category>
             <description>class name to apply on the generated element wrapping the whole circle.</description>
         </property>
         <property key="textClass" type="string" required="false" defaultValue="circles-text">
             <caption>Text Class</caption>
-            <category>Setup</category>
+            <category>Appearance</category>
             <description>Class name to apply on the generated element wrapping the text content.</description>
         </property>
         <property key="valueStrokeClass" type="string" required="false" defaultValue="circles-text">
             <caption>Value Stroke Class</caption>
-            <category>Setup</category>
+            <category>Appearance</category>
             <description>Class name to apply on the SVG path element which for the value amount.</description>
         </property>
         <property key="maxValueStrokeClass" type="string" required="false" defaultValue="circles-text">
             <caption>Max Value Stroke Class</caption>
-            <category>Setup</category>
+            <category>Appearance</category>
             <description>Class name to apply on the SVG path element which for the maxValue amount.</description>
-        </property>
-        <property key="styleText" type="boolean" required="true" defaultValue="true">
-            <caption>Style Text</caption>
-            <category>Setup</category>
-            <description>Whether or not to add inline styles to the text (defaults to true).</description>
         </property>
     </properties>
 </widget>

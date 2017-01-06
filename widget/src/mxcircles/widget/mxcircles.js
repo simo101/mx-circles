@@ -16,7 +16,6 @@ define([
     "dojo/_base/event",
     "mxcircles/lib/circles"
 
-
 ], function (declare, _WidgetBase, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, dojoConstruct, dojoArray, lang, dojoText, dojoHtml, dojoEvent, circles) {
     "use strict";
 
@@ -38,7 +37,6 @@ define([
 
         update: function (obj, callback) {
             logger.debug(this.id + ".update");
-
             this._contextObj = obj;
             this._resetSubscriptions();
             this._updateRendering(callback);
@@ -80,22 +78,17 @@ define([
 
         _updateRendering: function (callback) {
             logger.debug(this.id + "._updateRendering");
-
-
-
             if (this._contextObj !== null) {
                 dojoStyle.set(this.domNode, "display", "block");
                 var objRadius = parseInt(this._contextObj.get(this.radius));
                 var objValue = parseInt(this._contextObj.get(this.value));
                 var objMaxValue = parseInt(this._contextObj.get(this.maxValue));
                 var objWidth = parseInt(this._contextObj.get(this.width));
-
                 if (this._myCircle != null) {
                     this._updateCircle(objRadius, objValue, objWidth);
                 } else {
                     this._createCircle(objRadius, objValue, objMaxValue, objWidth);
                 }
-
             } else {
                 dojoStyle.set(this.domNode, "display", "none");
             }
@@ -122,7 +115,7 @@ define([
                 });
             }
         },
-
+        
         _executeCallback: function (cb) {
             if (cb && typeof cb === "function") {
                 cb();
