@@ -9,15 +9,10 @@
 
 
     <properties>
-        <property key="radius" type="attribute" required="true">
+        <property key="radius" type="integer" required="true" defaultValue="60">
             <caption>Radius</caption>
             <category>Data</category>
             <description>The radius of the circles</description>
-            <attributeTypes>
-                        <attributeType name="Integer"/>
-                        <attributeType name="Float"/>
-                        <attributeType name="Decimal"/>
-            </attributeTypes>
         </property>
         <property key="value" type="attribute" required="true">
             <caption>Value</caption>
@@ -29,25 +24,15 @@
                         <attributeType name="Decimal"/>
             </attributeTypes>
         </property>
-        <property key="maxValue" type="attribute" required="true">
+        <property key="maxValue" type="integer" required="true" defaultValue="100">
             <caption>Max Value</caption>
             <category>Data</category>
             <description>Maximum value of the circle (optional, defaults to 100)</description>
-            <attributeTypes>
-                        <attributeType name="Integer"/>
-                        <attributeType name="Float"/>
-                        <attributeType name="Decimal"/>
-            </attributeTypes>
         </property>
-        <property key="width" type="attribute" required="true">
+        <property key="width" type="integer" required="true" defaultValue="10">
             <caption>Width</caption>
             <category>Data</category>
             <description>The width of the ring (optional, has value 10, if not specified)</description>
-            <attributeTypes>
-                        <attributeType name="Integer"/>
-                        <attributeType name="Float"/>
-                        <attributeType name="Decimal"/>
-            </attributeTypes>
         </property>
         <property key="colors" type="string" required="true" defaultValue="#D3B6C6,#4B253A">
             <caption>Colours</caption>

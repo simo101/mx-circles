@@ -50,20 +50,17 @@ define([
             logger.debug(this.id + ".uninitialize");
         },
 
-        _updateCircle: function (objRadius, objValue, objWidth) {
-            this._myCircle.updateRadius(objRadius);
+        _updateCircle: function (objValue) {
             this._myCircle.update(objValue);
-            this._myCircle.updateWidth(objWidth);
-
         },
-        _createCircle: function (objRadius, objValue, objMaxValue, objWidth) {
+        _createCircle: function (objValue) {
             this._myCircle = circles.create({
                 el: this.domNode,
-                radius: objRadius,
+                radius: this.radius,
                 value: objValue,
-                maxValue: objMaxValue,
-                width: objWidth,
-                text: function (value) { return value + '%' },
+                maxValue: this.maxValue,
+                width: this.width,
+                text: function (value) { return value },
                 colors: this.colors.split(","),
                 duration: this.duration,
                 wrpClass: this.wrpClass,
@@ -80,14 +77,11 @@ define([
             logger.debug(this.id + "._updateRendering");
             if (this._contextObj !== null) {
                 dojoStyle.set(this.domNode, "display", "block");
-                var objRadius = parseInt(this._contextObj.get(this.radius));
                 var objValue = parseInt(this._contextObj.get(this.value));
-                var objMaxValue = parseInt(this._contextObj.get(this.maxValue));
-                var objWidth = parseInt(this._contextObj.get(this.width));
                 if (this._myCircle != null) {
-                    this._updateCircle(objRadius, objValue, objWidth);
+                    this._updateCircle(objValue);
                 } else {
-                    this._createCircle(objRadius, objValue, objMaxValue, objWidth);
+                    this._createCircle(objValue);
                 }
             } else {
                 dojoStyle.set(this.domNode, "display", "none");
@@ -115,7 +109,7 @@ define([
                 });
             }
         },
-        
+
         _executeCallback: function (cb) {
             if (cb && typeof cb === "function") {
                 cb();
