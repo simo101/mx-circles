@@ -29,6 +29,7 @@ define([
 
         constructor: function () {
             this._handles = [];
+            this._myCircle = null;
         },
 
         postCreate: function () {
