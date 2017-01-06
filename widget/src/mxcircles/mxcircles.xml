@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mxcircles.widget.mxcircles" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>mxcircles</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+        <property key="elementid" type="string" required="true" defaultValue="">
+            <caption>Element ID</caption>
+            <category>Setup</category>
+            <description>This ID of the HTML element to turn into a circle</description>
+        </property>
+        <property key="radius" type="attribute" required="true">
+            <caption>Radius</caption>
+            <category>Setup</category>
+            <description>The radius of the circles</description>
+            <attributeTypes>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Float"/>
+                        <attributeType name="Decimal"/>
+            </attributeTypes>
+        </property>
+        <property key="value" type="attribute" required="true">
+            <caption>Value</caption>
+            <category>Setup</category>
+            <description>Init value of the circle (optional, defaults to 0)</description>
+            <attributeTypes>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Float"/>
+                        <attributeType name="Decimal"/>
+            </attributeTypes>
+        </property>
+        <property key="maxValue" type="attribute" required="true">
+            <caption>Max Value</caption>
+            <category>Setup</category>
+            <description>Maximum value of the circle (optional, defaults to 100)</description>
+            <attributeTypes>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Float"/>
+                        <attributeType name="Decimal"/>
+            </attributeTypes>
+        </property>
+        <property key="width" type="attribute" required="true">
+            <caption>Width</caption>
+            <category>Setup</category>
+            <description>The width of the ring (optional, has value 10, if not specified)</description>
+            <attributeTypes>
+                        <attributeType name="Integer"/>
+                        <attributeType name="Float"/>
+                        <attributeType name="Decimal"/>
+            </attributeTypes>
+        </property>
+        <property key="colors" type="string" required="true" defaultValue="#D3B6C6,#4B253A">
+            <caption>Colours</caption>
+            <category>Setup</category>
+            <description>An array of colors, with the first item coloring the full circle (optional, it will be ['#EEE', '#F00'] if not specified) Can also be an rgba() value (example: ['rgba(255,255,255,0.25)', 'rgba(125,125,125,0.5)'])</description>
+        </property>
+        <property key="duration" type="integer" required="true" defaultValue="500">
+            <caption>Duration</caption>
+            <category>Setup</category>
+            <description>Value in ms of animation's duration; defaults to 500; if 0 or null is passed, the animation will not run.</description>
+        </property>
+        <property key="wrpClass" type="string" required="false" defaultValue="circles-wrp">
+            <caption>Wrapper Class</caption>
+            <category>Setup</category>
+            <description>class name to apply on the generated element wrapping the whole circle.</description>
+        </property>
+        <property key="textClass" type="string" required="false" defaultValue="circles-text">
+            <caption>Text Class</caption>
+            <category>Setup</category>
+            <description>Class name to apply on the generated element wrapping the text content.</description>
+        </property>
+        <property key="valueStrokeClass" type="string" required="false" defaultValue="circles-text">
+            <caption>Value Stroke Class</caption>
+            <category>Setup</category>
+            <description>Class name to apply on the SVG path element which for the value amount.</description>
+        </property>
+        <property key="maxValueStrokeClass" type="string" required="false" defaultValue="circles-text">
+            <caption>Max Value Stroke Class</caption>
+            <category>Setup</category>
+            <description>Class name to apply on the SVG path element which for the maxValue amount.</description>
+        </property>
+        <property key="styleText" type="boolean" required="true" defaultValue="true">
+            <caption>Style Text</caption>
+            <category>Setup</category>
+            <description>Whether or not to add inline styles to the text (defaults to true).</description>
+        </property>
+    </properties>
+</widget>
