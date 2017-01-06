@@ -60,7 +60,7 @@ define([
         },
         _createCircle: function (objRadius, objValue, objMaxValue, objWidth) {
             this._myCircle = circles.create({
-                id: this.elementid,
+                el: this.domNode,
                 radius: objRadius,
                 value: objValue,
                 maxValue: objMaxValue,
