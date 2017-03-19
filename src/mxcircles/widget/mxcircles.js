@@ -61,7 +61,7 @@ define([
                 maxValue: this.maxValue,
                 width: this.width,
                 text: function (value) { return value },
-                colors: this.colors.split(","),
+                colors: this.colors.split(";"),
                 duration: this.duration,
                 wrpClass: this.wrpClass,
                 textClass: this.textClass,
@@ -71,7 +71,6 @@ define([
                 styleText: true
             });
         },
-
 
         _updateRendering: function (callback) {
             logger.debug(this.id + "._updateRendering");

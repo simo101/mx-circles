@@ -34,10 +34,10 @@
             <category>Data</category>
             <description>The width of the ring (optional, has value 10, if not specified)</description>
         </property>
-        <property key="colors" type="string" required="true" defaultValue="#D3B6C6,#4B253A">
-            <caption>Colours</caption>
+        <property key="colors" type="string" required="true" defaultValue="#D3B6C6;#4B253A">
+            <caption>Colors</caption>
             <category>Appearance</category>
-            <description>An array of colors, with the first item coloring the full circle (optional, it will be ['#EEE', '#F00'] if not specified) Can also be an rgba() value (example: ['rgba(255,255,255,0.25)', 'rgba(125,125,125,0.5)'])</description>
+            <description>An array of colors, with the first item coloring the full circle (optional, it will be ['#EEE'; '#F00'] if not specified) Can also be an rgba() value (example: ['rgba(255,255,255,0.25)'; 'rgba(125,125,125,0.5)'])</description>
         </property>
         <property key="duration" type="integer" required="true" defaultValue="500">
             <caption>Duration</caption>
