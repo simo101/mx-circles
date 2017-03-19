@@ -1,6 +1,6 @@
 # Mx Circles
 
-The Mx Circles is a Mendix implementation of the [circles,js](https://github.com/lugolabs/circles) library. 
+The Mx Circles is a Mendix implementation of the [circles.js](https://github.com/lugolabs/circles) library. 
 Circles js is a Lightweight JavaScript library that generates circular graphs in SVG. Now with animation.
 
 ## How to install
